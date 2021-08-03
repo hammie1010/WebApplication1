@@ -1,0 +1,67 @@
+﻿<Bar Breakpoint="Breakpoint.Widescreen"
+     Background="Background.Dark"
+     ThemeContrast="ThemeContrast.Dark">
+    <BarBrand>
+        <BarItem>
+            <BarLink Style="color:white" To="">
+                <Figure Padding="Padding.Is0" Size="FigureSize.Is32x32" Margin="Margin.Is0">
+                    <FigureImage Source="favicon.ico" />
+                </Figure>
+                TOAST
+            </BarLink>
+        </BarItem>
+    </BarBrand>
+    <BarToggler />
+    <BarMenu>
+        <BarStart>
+            <BarItem>
+                <BarLink To="#home">Home</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarLink To="healthcheck">Health Check</BarLink>
+            </BarItem>
+            <BarItem>
+                <BarDropdown>
+                    <BarDropdownToggle>Dropdown</BarDropdownToggle>
+                    <BarDropdownMenu>
+                        <BarDropdownItem To="healthcheck">Health Check</BarDropdownItem>
+                        <BarDropdownItem To="fetchdata">Fetch Data</BarDropdownItem>
+                    </BarDropdownMenu>
+                </BarDropdown>
+            </BarItem>
+            <BarItem>
+                <BarDropdown>
+                    <BarDropdownToggle>Operations</BarDropdownToggle>
+                    <BarDropdownMenu>
+                        <BarDropdownItem To="accountrestrictions">Account Restrictions</BarDropdownItem>
+                    </BarDropdownMenu>
+                </BarDropdown>
+            </BarItem>
+            <BarItem>
+                <BarDropdown>
+                    <BarDropdownToggle>IT Admin</BarDropdownToggle>
+                    <BarDropdownMenu>
+                        <BarDropdownItem To="logviewer">Log Viewer</BarDropdownItem>
+                        <BarDropdownItem To="healthcheck">Health Check</BarDropdownItem>
+                        <BarDropdownItem To="configurationvalues">Configuration Values</BarDropdownItem>
+
+                        @*  Issue with nested drop down should be fixed soon
+                            https://github.com/stsrki/Blazorise/issues/1559*@
+                        <BarDropdown>
+                            <BarDropdownToggle>System Data Administration</BarDropdownToggle>
+                            <BarDropdownMenu>
+                                <BarDropdownItem To="">Health Check2</BarDropdownItem>
+                                <BarDropdownItem To="">Fetch Data2</BarDropdownItem>
+                            </BarDropdownMenu>
+                        </BarDropdown>
+                    </BarDropdownMenu>
+                </BarDropdown>
+            </BarItem>
+        </BarStart>
+        <BarEnd>
+            <BarItem>
+                Nothing
+            </BarItem>
+        </BarEnd>
+    </BarMenu>
+</Bar>
